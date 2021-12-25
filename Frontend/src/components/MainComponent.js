@@ -23,15 +23,29 @@ class Main extends Component {
 
     //Fetch all products
     getProducts() {
-        this.setState({
-            products: PRODUCTS
+        fetch('http://localhost:5000/featuredProducts')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                products: result
+            })
         })
         console.log("on getProduct");
     }
 
     componentDidMount() {
-        this.getProducts();
+        //this.getProducts();
         console.log("on componentDis Mount");
+        fetch('http://localhost:5000/featuredProducts')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                products: result
+            })
+            },(err)=>{
+                console.log("error",err)
+            })
+        console.log("on getProduct");
     }
 
     render() {
