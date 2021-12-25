@@ -18,7 +18,23 @@ function RenderFeatured({item}) {
   );
 }
 
+//isme array products ka jaega
+/**
+ * @param products object's array
+ * 
+ */
+const returnFeatProducts = (products) => {
+
+  let renderedFeatArr = []
+  for (let i = 0; i < products.length; i++) {
+    const element = products[i];
+    renderedFeatArr.push( <RenderFeatured key={element.id} item={element} /> )
+  }
+  return renderedFeatArr;
+}
+
 function Home(props) {
+
   return(
     <div className="container-fluid bgc">
       <HCarousel className="home-carousel"/>
@@ -89,15 +105,7 @@ function Home(props) {
 
       <div className="row featured-products">
         <h1>Our Featured Products</h1>
-            <RenderFeatured item={props.product1} />
-            <RenderFeatured item={props.product2} />
-            <RenderFeatured item={props.product3} />
-            <RenderFeatured item={props.product4} />
-            <br/><div>&nbsp;</div>
-            <RenderFeatured item={props.product5} />
-            <RenderFeatured item={props.product6} />
-            <RenderFeatured item={props.product7} />
-            <RenderFeatured item={props.product8} />
+        { returnFeatProducts(props.product) }
       </div>
       <h2>Corporate</h2>
       <div className="row ceo">

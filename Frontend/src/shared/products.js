@@ -78,7 +78,7 @@ export const PRODUCTS = [
         oldPrice: '21240',
         price: '',
         tag: '',
-        featured: true
+        featured: false
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ export const PRODUCTS = [
         oldPrice: '21240',
         price: '',
         tag: '',
-        featured: true
+        featured: false
     },
     {
         id: 10,

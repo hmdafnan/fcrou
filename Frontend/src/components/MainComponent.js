@@ -16,8 +16,22 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            products: PRODUCTS,
+            products: [],
         };
+        this.getProducts = this.getProducts.bind(this);
+    }
+
+    //Fetch all products
+    getProducts() {
+        this.setState({
+            products: PRODUCTS
+        })
+        console.log("on getProduct");
+    }
+
+    componentDidMount() {
+        this.getProducts();
+        console.log("on componentDis Mount");
     }
 
     render() {
@@ -25,14 +39,7 @@ class Main extends Component {
         const HomePage = () => {
             return(
                 <Home
-                    product1={this.state.products.filter( (product) => product.featured)[0]}
-                    product2={this.state.products.filter( (product) => product.featured)[1]}
-                    product3={this.state.products.filter( (product) => product.featured)[2]}
-                    product4={this.state.products.filter( (product) => product.featured)[3]}
-                    product5={this.state.products.filter( (product) => product.featured)[4]}
-                    product6={this.state.products.filter( (product) => product.featured)[5]}
-                    product7={this.state.products.filter( (product) => product.featured)[6]}
-                    product8={this.state.products.filter( (product) => product.featured)[7]}
+                    product={this.state.products.filter( (product) => product.featured)}
                 />
             );
         }
