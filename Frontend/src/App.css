@@ -1,0 +1,355 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400&display=swap');
+
+/*------------------------------------------------------------------
+-----------------------------HEADER---------------------------------
+------------------------------------------------------------------*/
+
+.header {
+  background: #01587c;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-logo {
+  
+}
+
+.nav-link {
+  font-size: 14px;
+  border: 2px solid;
+  text-decoration: none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-link:hover {
+  transition: ease all 0.3s;
+  z-index: 1;
+  box-shadow: 0 0 25px -5px rgb(0, 0, 0);
+  -webkit-transition: ease all 0.3s;
+  -moz-transition: ease all 0.3s;
+  -ms-transition: ease all 0.3s;
+  -o-transition: ease all 0.3s;
+}
+
+.active-nav-link {
+  font-size: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-logo {
+  width:100%;
+  margin-top: -35px;
+  align-content: center;
+
+}
+
+.top-head-left {
+  font-size: small;
+  color: floralwhite;
+}
+
+.top-head-center {
+  color: #999;
+  font-size: small;
+  padding-top: 10px;
+}
+
+.top-head-right {
+  padding-top: 35px;
+}
+
+.top-header-button {
+  margin-left: -30px;
+}
+
+.appointment {
+  border: 1px #3ebdf3;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-style:hidden;
+  color: #ddd;
+  font-weight: bold;
+  padding: 10px 30px 10px 30px;
+  background: #01587c;
+  box-shadow: 0px 0px 30px -5px #111;
+  margin-top: 25px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.appointment:hover {
+}
+
+.header-info{
+  color: #ddd;
+  font-size: large;
+  padding: 30px 0 30px 0;
+}
+
+.address {
+}
+
+.topbar-label {
+
+}
+
+.topbar-label-tooltip .topbar-label-tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: rgba(0,0,0,0.2);
+  font-family:'Courier New', Courier, monospace;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.topbar-label-tooltip:hover  .topbar-label-tooltiptext {
+  visibility: visible;
+}
+
+
+/*------------------------------------------------------------------
+--------------------------FOOTER------------------------------------
+------------------------------------------------------------------*/
+
+.footer-style-main {
+  padding: 0;
+  background: #111;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+}
+
+.map-section {
+	float: right;
+	width: 35%;
+  background: #3ebdf3;
+}
+
+#map {
+	height: 100%;
+	min-height: 240px;
+	z-index: 1;
+}
+
+.footer-blog {
+	float: left;
+	width: 65%;
+	padding: 45px 75px 100px 75px;
+  text-align: left;
+}
+
+.footer-heading-title {
+  color: floralwhite;
+}
+
+.design-rectangle {
+    height: 5px;
+    width: 35px;
+    background-color: #61dafb;
+}
+
+.social-icons {
+}
+
+.menu-list{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: floralwhite;
+}
+
+.footer-blog-bottom {
+	float: left;
+	width: 65%;
+  padding-top:50px;
+  text-align: left;
+}
+
+.social-icons-onhover{
+  padding: 0px 5px 0px 5px;
+}
+
+.social-icons-onhover:hover {
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  z-index: 1;
+}
+
+.social-icons:hover {
+  top: 0px
+}
+
+/*------------------------------------------------------------------
+--------------------------Home Page---------------------------------
+------------------------------------------------------------------*/
+.container-fluid{
+  font-family: 'Titillium Web', sans-serif;
+}
+.home-section2 {
+  padding: 100px 0px 0px 0px;
+}
+
+.home-section2 p {
+  color: floralwhite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+}
+
+.home-section2 h4 {
+  padding: 20px 0px;
+  font-size: large;
+}
+
+.partition {
+  height: 5px;
+  width: 10px;
+  background: #039ee3;
+}
+
+.home-carousel {
+  aspect-ratio: 16/8;
+  margin-bottom: 100px;
+  padding: 20px;
+}
+
+.carousel-caption {
+  height: 100px;
+  top: 400px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  font: 30px;
+  color: black;
+  box-shadow: 0 0 70px -17px #39c7fb;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  animation-name: carousel-caption;
+  animation-duration: 2s;
+  animation-delay: -0.2s;
+  animation-direction: alternate;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@keyframes carousel-caption {
+  0% {top: 200px;}
+  50% {top: 460px; height: 100px;}
+  75% { top: 400px; height: 200px;}
+  100% { top: 400px; height:100px }
+}
+
+.bgc {
+  background: linear-gradient(to top left, #666, #bbb);
+  background-attachment: fixed;
+}
+
+.featured-products{
+  padding: 30px;
+}
+
+.featured-card{
+  min-height: 450px;
+  transition: ease all 0.5s;
+  -webkit-transition: ease all 0.5s;
+  -moz-transition: ease all 0.5s;
+  -ms-transition: ease all 0.5s;
+  -o-transition: ease all 0.5s;
+}
+
+.featured-card-image {
+	overflow: hidden;
+	background: #f3f3f3;
+  padding: 0;
+}
+
+.featured-card:hover,
+.featured-card:focus {
+	box-shadow: 0 0 70px -17px #39c7fb;
+  z-index: 1;
+  padding: 0px;
+  background: #39c7fb30;
+  backdrop-filter: blur(12px);
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size:large;
+  font-style: italic;
+}
+
+.new-price {
+  text-decoration: solid;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.cleaning .featured-card-image img {
+	padding: 0;
+}
+
+.img-responsive {
+	max-width: 100%;
+}
+
+.ceo {
+  text-align: right;
+}
+
+/*------------------------------------------------------------------
+--------------------------Tally Page--------------------------------
+------------------------------------------------------------------*/
+
+.tally-page-pic {
+  padding: 20px;
+}
+
+.tally-main-logo {
+  padding: 30px 0 30px 0;
+}
