@@ -1,10 +1,42 @@
 import React from 'react';
 
+function RenderTallyPrice({item}) {
+  return (
+    <div className="col-md-4 tally-prices">
+      <div className="featured-card-image">
+        <img src={item.image} alt={item.name} className="img-responsive"/>
+      </div>
+      <br/>
+      <h4>{item.name}</h4>
+      <div className="featured-price">
+        <p>
+          <span className="new-price">&#8377; {item.price}</span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * 
+ * @param {tallyCard} props 
+ * @returns array of rendered tally cards
+ */
+
+function returnTallyPrices(tallyElement) {
+  let renderedTallyArr = []
+  for (let i = 0; i < tallyElement.length; i++) {
+    const element = tallyElement[i];
+    renderedTallyArr.push( <RenderTallyPrice key={element.id} item={element} /> )
+  }
+  return renderedTallyArr;
+}
+
 function Tally(props) {
   return(
-    <div className="container-fluid">
+    <div className="container-fluid bgc">
       <div className="row tally-main-logo">
-        <img className="offset-1 col-10 offset-1" src="/assets/tally/tallymainlogo.jpg" alt="tally" height="80%" />
+        <img className="offset-1 col-10 offset-1 tally-banner" src="/assets/tally/tallymainlogo.jpg" alt="tally" height="80%" />
         <h1 className="offset-2 col-8">Manage your accounts at your fingertips</h1>
       </div>
       <div className="row tally-page-1">
@@ -40,7 +72,7 @@ function Tally(props) {
         </div>
       </div>
       <div className='row'>
-        asdggh
+        {returnTallyPrices(props.tallyCard)}
       </div>
     </div>
   );

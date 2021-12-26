@@ -17,8 +17,10 @@ class Main extends Component {
 
         this.state = {
             products: [],
+            tally:[]
         };
         this.getProducts = this.getProducts.bind(this);
+        this.getTallyPrices = this.getTallyPrices.bind(this);
     }
 
     //Fetch all products
@@ -31,6 +33,17 @@ class Main extends Component {
             })
         })
         console.log("on getProduct");
+    }
+
+    getTallyPrices() {
+        fetch('http://localhost:5000/tallyPrices')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                    tally: result
+                })
+            })
+            console.log('on Tally setState');
     }
 
     componentDidMount() {
@@ -46,9 +59,27 @@ class Main extends Component {
                 console.log("error",err)
             })
         console.log("on getProduct");
+        fetch('http://localhost:5000/tallyPrices')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                    tally: result
+                })
+            },(err) => {
+                console.log(err, 'on getTally')
+            })
+            console.log('on Tally setState');
     }
 
     render() {
+
+        const TallyPage = () => {
+            return(
+                <Tally
+                    tallyCard={this.state.tally}
+                />
+            )
+        }
 
         const HomePage = () => {
             return(
@@ -63,7 +94,7 @@ class Main extends Component {
             <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path="/tally" component={Tally} />
+                    <Route exact path="/tally" component={TallyPage} />
                     <Route exact path="/software" component={Software} />
                     <Route exact path="/products" component={Products} />
                     <Route exact path="/aboutus" component={AboutUs} />

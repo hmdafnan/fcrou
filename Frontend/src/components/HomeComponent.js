@@ -49,53 +49,53 @@ function Home(props) {
       <span className="partition"></span> 
       <div className="row home-section2">
         <div className="col-sm-3">
-          <div className="icon"> <img src="/images/it_service/cloud-new.png" alt="#" height="90px" width="120px"/> </div>
+          <div className="icon"> <img src="/assets/home/cloud-new.png" alt="#" height="90px" width="120px"/> </div>
           <h4 className="theme_color">Tally On Cloud</h4>
           <p>Tally on Cloud is a service that will take your offline Tally software on cloud. 
             You will be able to access your Tally data from anywhere and at anytime and from any device. 
             This cloud computing service will help you access your data from anywhere and at anytime taking your business to a new level of productivity.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="/images/it_service/laptop.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/laptop.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">Laptop Repair</h4>
           <p>Is your laptop showing error messages, loading programs slowly, or shutting down unexpectedly?<br/>
             While there could be a number of reasons why this is happening, some of those reasons are more serious than others.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/computer.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/computer.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">Computer Repair</h4>
           <p>Computer repair is the process of identifying, troubleshooting and resolving problems and issues in a faulty computer. 
             Computer repair is a broad field encompassing many tools, techniques and procedures used to repair computer hardware, software or network/Internet problems. 
             Computer repair is also known as PC repair.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/printer.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/printer.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">Printer Repair</h4>
           <p>The Printer Technician is a professional who installs new printers, configure printers on network, maintain and ensures
              the proper function of standalone printers, scanners or Network Printers.
              The Printer Technician takes care of the regular and routine repairs including replacements such as new ink cartridges..</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/data.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/data.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">Data Recovery</h4>
           <p>Data recovery is the process of restoring data that has been lost, accidentally deleted, corrupted or made inaccessible. 
             In enterprise IT, data recovery typically refers to the restoration of data to a desktop, laptop, server or external storage system from a backup.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/network.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/network.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">Network Solutions</h4>
           <p>Network Solutions offers everything you need to get online quickly. 
             From website development to optimization, social media, online advertising and more, we'll have your business online in no time.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/cctv.png" alt="#" height="90px" width="90px"/> </div>
+          <div className="icon"> <img src="/assets/home/cctv.png" alt="#" height="90px" width="90px"/> </div>
           <h4 className="theme_color">CCTV Solutions</h4>
           <p>CCTV, or closed-circuit television, is a system that allows you to keep an eye on what's going on in and around your business. 
             Cameras and monitors enable you to view events live, and recorders archive footage for later reference. 
             Don't mistake a CCTV monitor for an ordinary television.</p>
         </div>
         <div className="col-sm-3">
-          <div className="icon"> <img src="images/it_service/biz-analyst.png" alt="#" height="90px" width="120px"/> </div>
+          <div className="icon"> <img src="/assets/home/biz-analyst.png" alt="#" height="90px" width="120px"/> </div>
           <h4 className="theme_color">BIZ Analyst</h4>
           <p>Install Biz Analyst App in your iOS or Android Mobile Set and access Tally data at anytime even if you are on the move. 
             Sync to your office data and view, mail and whatsapp any invoice, report or statement. 
