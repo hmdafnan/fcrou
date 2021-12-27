@@ -2,9 +2,9 @@ import React from 'react';
 
 function RenderTallyPrice({item}) {
   return (
-    <div className="col-md-4 tally-prices">
-      <div className="featured-card-image">
-        <img src={item.image} alt={item.name} className="img-responsive"/>
+    <div className="col-md-3 tally-prices">
+      <div className="featured-card-image-tally">
+        <img src={item.image} alt={item.name} className="img-responsive" height="300px" />
       </div>
       <br/>
       <h4>{item.name}</h4>
@@ -41,7 +41,7 @@ function Tally(props) {
       </div>
       <div className="row tally-page-1">
         <div className="col-md-3 tally-page-pic">
-          <img src="/assets/tally/tally.jpg" alt="tally1" />
+          <img src="/assets/tally/growth.png" alt="tally1" height="100px" />
         </div>
         <div className="col-md-8 tally-page-pic">
           <h3 style={{textAlign:"left"}}>Manage business growth</h3>
@@ -59,10 +59,10 @@ function Tally(props) {
           </p>
         </div>
         <div className="col-md-2 col-2 tally-page-pic">
-          <img src="/assets/tally/tally1.jpg" alt="tally1" />
+          <img src="/assets/tally/cash-flow.png" alt="Better control over cash flow" height="100px" />
         </div>
         <div className="col-md-3 tally-page-pic">
-          <img src="/assets/tally/tally2.jpg" alt="tally1" />
+          <img src="/assets/tally/productivity.png" alt="tally1" height="100px" />
         </div>
         <div className="col-md-8 tally-page-pic">
           <h3 style={{textAlign:"left"}}>Improved productivity</h3>
@@ -71,7 +71,7 @@ function Tally(props) {
           </p>
         </div>
       </div>
-      <div className='row'>
+      <div className='row'>&nbsp;
         {returnTallyPrices(props.tallyCard)}
       </div>
     </div>
