@@ -24,10 +24,10 @@ class ContactUs extends Component {
 
         console.log('The present state is:', {name, email, phno, message});
 
-        axios.post('/admin', { name, email, phno, message })
-            .then((result) => {
-                console.log(result)
-            })
+        // axios.post('/admin', { name, email, phno, message })
+        //     .then((result) => {
+        //         console.log(result)
+        //     })
     }
 
     render() {

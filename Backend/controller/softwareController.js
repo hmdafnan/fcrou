@@ -1,10 +1,10 @@
-const products = require('../shared/products');
+const software = require('../shared/softwares');
 
-const getFeaturedProducts = (req, res, next) => {
+const getSoftware = (req, res, next) => {
     try {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'appliction/json');
-        res.json(products);
+        res.json(software);
 
     } catch (error) {
         res.statusCode = 401;
@@ -13,6 +13,8 @@ const getFeaturedProducts = (req, res, next) => {
     }
 }
 
+const postSoftware = (req, res, next) => {
+    
+}
 
-
-module.exports = {getFeaturedProducts}
+module.exports = {getSoftware};

@@ -106,7 +106,7 @@ export const PRODUCTS = [
         price: '',
         tag: '',
         featured: false
-    },
+    }
 
 
 ]

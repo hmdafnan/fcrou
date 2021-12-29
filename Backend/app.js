@@ -11,6 +11,7 @@ var productRouter = require('./routes/productRouter');
 var softwareRouter = require('./routes/softwareRouter');
 var featuredProductRouter = require('./routes/featuredProductRouter');
 var tallyPriceRouter = require('./routes/tallyPriceRouter');
+var softwareRouter = require('./routes/softwareRouter');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/products', productRouter);
 app.use('/softwares', softwareRouter);
 app.use('/featuredProducts', featuredProductRouter);
 app.use('/tallyPrices', tallyPriceRouter);
+app.use('/softwares', softwareRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
