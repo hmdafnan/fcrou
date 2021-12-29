@@ -21,14 +21,14 @@ const TALLY = [
         image: "/assets/tally/tallySilver.png"
     },
     {
-        id: 2,
+        id: 3,
         name: "TallyPrime TSS Silver",
         price: "18000 + GST",
         description: "this is dummy description",
         image: "/assets/tally/tallySilverTSS.png"
     },
     {
-        id: 2,
+        id: 4,
         name: "TallyPrime TSS Gold",
         price: "18000 + GST",
         description: "this is dummy description",

@@ -1,7 +1,8 @@
 import React from 'react';
 
 function RenderTallyPrice({item}) {
-  return (
+  if(item.id < 3){
+    return (
     <div className="col-md-3 tally-prices">
       <div className="featured-card-image-tally">
         <img src={item.image} alt={item.name} className="img-responsive" height="300px" />
@@ -15,6 +16,44 @@ function RenderTallyPrice({item}) {
       </div>
     </div>
   );
+  } if(item.id === 3) {
+    return (
+    <div className="offset-3 col-md-3"> &nbsp;
+      <div  className="tally-prices">
+      <div className="featured-card-image-tally">
+        <img src={item.image} alt={item.name} className="img-responsive" height="300px" />
+      </div>
+      <br/>
+      <h4>{item.name}</h4>
+      <div className="featured-price">
+        <p>
+          <span className="new-price">&#8377; {item.price}</span>
+        </p>
+      </div>
+    </div>
+    &nbsp;
+    </div>
+    
+    )
+  } if(item.id === 4) {
+    return (
+      <div className="col-md-3"> &nbsp;
+      <div  className="tally-prices">
+      <div className="featured-card-image-tally">
+        <img src={item.image} alt={item.name} className="img-responsive" height="300px" />
+      </div>
+      <br/>
+      <h4>{item.name}</h4>
+      <div className="featured-price">
+        <p>
+          <span className="new-price">&#8377; {item.price}</span>
+        </p>
+      </div>
+    </div>
+    </div>
+    )
+  }
+  
 }
 
 /**
@@ -73,6 +112,7 @@ function Tally(props) {
       </div>
       <div className='row'>&nbsp;
         {returnTallyPrices(props.tallyCard)}
+        {console.log(props.tallyCard)}
       </div>
     </div>
   );

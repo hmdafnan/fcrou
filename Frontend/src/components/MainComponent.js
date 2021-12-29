@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
-import { Route, Redirect } from 'react-router-dom';
-import { Switch } from 'react-router';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import Home from './HomeComponent';
 import Software from './SoftwareComponent';
 import Tally from './TallyComponent';
 import Products from './ProductsComponent';
 import AboutUs from './AboutUsComponent';
 import Footer from './FooterComponent';
-
-import { PRODUCTS } from '../shared/products';
+import ContactUs from './ContactUsComponent';
 
 class Main extends Component {
     constructor(props) {
@@ -93,14 +91,15 @@ class Main extends Component {
             <div>
             <Header />
                 <Switch>
-                    <Route path='/home' component={HomePage} />
-                    <Route exact path="/tally" component={TallyPage} />
-                    <Route exact path="/software" component={Software} />
-                    <Route exact path="/products" component={Products} />
-                    <Route exact path="/aboutus" component={AboutUs} />
-                    <Redirect to="/home" />
+                        <Route path='/home' component={HomePage} />
+                        <Route exact path="/tally" component={TallyPage} />
+                        <Route exact path="/software" component={Software} />
+                        <Route exact path="/products" component={Products} />
+                        <Route exact path="/aboutus" component={AboutUs} />
+                        <Route exact path="/contactus" component={ContactUs} />
+                        <Redirect to='/home' />
                 </Switch>
-                <Footer />
+            <Footer />
             </div>
         );
     }

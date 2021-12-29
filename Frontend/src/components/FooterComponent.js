@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Map from './Map';
 
 function Footer(props) {
     return(
@@ -7,7 +8,8 @@ function Footer(props) {
             <div className="container-fluid">
                 <div className="row">
                     <div className="map-section col-md-3">
-                        <div id="map"></div>
+                        <div id="map">
+                        </div>
                     </div>
                         <div className="footer-blog col-md-2">
                             <div className="footer-heading-title">

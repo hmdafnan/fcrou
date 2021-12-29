@@ -7,8 +7,6 @@ import {
   NavbarBrand,
   Collapse,
 } from "reactstrap";
-import { StickyNav } from 'react-js-stickynav';
-import 'react-js-stickynav/dist/index.css';
 import "../index.css";
 import { NavLink } from "react-router-dom";
 
@@ -123,7 +121,11 @@ class Header extends Component {
                 </Nav>
               </span>
               <span className="top-header-button offset-1 col-md-2">
-                <button className="appointment"><span className="fa fa-phone">&nbsp;</span> Contact Us</button>
+              <NavLink
+                  to="/contactus"
+                  style={{textDecoration: "none", color: "#ddd"}} >
+                <button className="appointment"><span className="fa fa-phone">&nbsp;</span>
+                 Contact Us </button></NavLink>
               </span>
             </div>
           </div>

@@ -118,7 +118,7 @@
   -o-border-radius: 20px;
 }
 
-.appointment:hover {
+.appointment {
 }
 
 .header-info{
@@ -288,7 +288,7 @@
 .bgc {
   background: linear-gradient(to top left, #666, #bbb);
   background-attachment: fixed;
-  color: #ddd;
+  color: #ededed;
 }
 
 .featured-products{
