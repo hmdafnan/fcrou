@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
+const establishConnection = require('./utils/mongooseConnection');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productRouter');
@@ -12,6 +13,7 @@ var softwareRouter = require('./routes/softwareRouter');
 var featuredProductRouter = require('./routes/featuredProductRouter');
 var tallyPriceRouter = require('./routes/tallyPriceRouter');
 var softwareRouter = require('./routes/softwareRouter');
+var contactUsRouter = require('./routes/contactUsRouter');
 
 var app = express();
 
@@ -25,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+establishConnection();
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -34,6 +37,7 @@ app.use('/softwares', softwareRouter);
 app.use('/featuredProducts', featuredProductRouter);
 app.use('/tallyPrices', tallyPriceRouter);
 app.use('/softwares', softwareRouter);
+app.use('/contactus', contactUsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -23,11 +23,12 @@ class ContactUs extends Component {
         const { name, email, phno, message } = this.state;
 
         console.log('The present state is:', {name, email, phno, message});
+        alert(JSON.stringify({name, email, phno, message}));
 
-        // axios.post('/admin', { name, email, phno, message })
-        //     .then((result) => {
-        //         console.log(result)
-        //     })
+        axios.post('http://localhost:5000/contactus', { name, email, phno, message })
+            .then((result) => {
+                console.log(result)
+            })
     }
 
     render() {
