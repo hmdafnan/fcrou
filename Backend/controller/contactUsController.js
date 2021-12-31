@@ -35,7 +35,7 @@ const getContactUs = async (req, res, next) => {
     const response = prepareResponse();
     try {
         // const prevData = JSON.parse(fs.readFileSync('./shared/contactUs.json', {encoding: 'utf-8'}));
-        const contacts = await Contact.find({});
+        const contacts = await Contact.find({}).sort({createdAt: -1});
         response.status =200;
         response.body = contacts;
     } catch (error) {
