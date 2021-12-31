@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import {
-  Navbar,
   Nav,
   NavItem,
   NavbarToggler,
-  NavbarBrand,
-  Collapse,
+  NavbarBrand
 } from "reactstrap";
 import "../index.css";
 import { NavLink } from "react-router-dom";

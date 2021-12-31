@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Form, Input, Label, Button, Row, Col } from 'reactstrap';
 
+const url = 'http://localhost:5000';
+
 class ContactUs extends Component {
 
     constructor(props) {
@@ -25,7 +27,7 @@ class ContactUs extends Component {
         console.log('The present state is:', {name, email, phno, message});
         alert(JSON.stringify({name, email, phno, message}));
 
-        axios.post('http://localhost:5000/contactus', { name, email, phno, message })
+        axios.post(`${url}/contactus`, { name, email, phno, message })
             .then((result) => {
                 console.log(result)
             })

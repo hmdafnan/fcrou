@@ -48,11 +48,15 @@ const getContactUs = async (req, res, next) => {
 const deleteContactUs = async (req, res, next) => {
     const response = prepareResponse();
     try {
-
+        await Contact.findByIdAndRemove(req.params.contactId)
+        response.status =200;
+        response.body = "Deletion Success";
     }
     catch (error) {
-
+        response.status = 401
+        response.body = error.message;
     }
+    res.json(response);
 }
 
 module.exports = {postContactUs, getContactUs, deleteContactUs};

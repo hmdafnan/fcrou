@@ -8,6 +8,7 @@ import Products from './ProductsComponent';
 import AboutUs from './AboutUsComponent';
 import Footer from './FooterComponent';
 import ContactUs from './ContactUsComponent';
+import Dashboard from './Dashboard';
 
 class Main extends Component {
     constructor(props) {
@@ -15,10 +16,12 @@ class Main extends Component {
 
         this.state = {
             products: [],
-            tally:[]
+            tally:[],
+            notifications: []
         };
         this.getProducts = this.getProducts.bind(this);
         this.getTallyPrices = this.getTallyPrices.bind(this);
+        this.getNotifications = this.getNotifications.bind(this);
     }
 
     //Fetch all products
@@ -33,6 +36,7 @@ class Main extends Component {
         console.log("on getProduct");
     }
 
+    //Fetch tally prices
     getTallyPrices() {
         fetch('http://localhost:5000/tallyPrices')
             .then(res => res.json())
@@ -44,9 +48,23 @@ class Main extends Component {
             console.log('on Tally setState');
     }
 
+    //Fetch ContactUs queries(notifications) for dashboard
+    getNotifications() {
+        fetch('http://localhost:5000/contactus')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                    notifications: result
+                })
+            },(err) => {
+                console.log(err, 'on Dashboard')
+            })
+            console.log('on Dashboard setState');
+    }
+
     componentDidMount() {
         //this.getProducts();
-        console.log("on componentDis Mount");
+        console.log("on component Did Mount");
         fetch('http://localhost:5000/featuredProducts')
             .then(res => res.json())
             .then( (result) => {
@@ -67,6 +85,16 @@ class Main extends Component {
                 console.log(err, 'on getTally')
             })
             console.log('on Tally setState');
+        fetch('http://localhost:5000/contactus')
+            .then(res => res.json())
+            .then( (result) => {
+                this.setState({
+                    notifications: result
+                })
+            },(err) => {
+                console.log(err, 'on Dashboard')
+            })
+            console.log('on Dashboard setState');
     }
 
     render() {
@@ -87,6 +115,15 @@ class Main extends Component {
             );
         }
 
+        const DashboardNew = () => {
+            console.log(this.state.notifications.body);
+            return(
+                <Dashboard
+                    notification={this.state.notifications.body}
+                />
+            );
+        }
+
         return(
             <div>
             <Header />
@@ -97,6 +134,7 @@ class Main extends Component {
                         <Route exact path="/products" component={Products} />
                         <Route exact path="/aboutus" component={AboutUs} />
                         <Route exact path="/contactus" component={ContactUs} />
+                        <Route exact path="/dashboard" component={DashboardNew} />
                         <Redirect to='/home' />
                 </Switch>
             <Footer />

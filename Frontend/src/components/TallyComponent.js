@@ -112,7 +112,6 @@ function Tally(props) {
       </div>
       <div className='row'>&nbsp;
         {returnTallyPrices(props.tallyCard)}
-        {console.log(props.tallyCard)}
       </div>
     </div>
   );
