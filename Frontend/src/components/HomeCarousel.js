@@ -46,7 +46,8 @@ class HCarousel extends Component {
 	}
 
 	onExiting() {
-		this.animating = true;
+		// this.animating = true;
+		this.animating = false;
 	}
 
 	onExited() {
