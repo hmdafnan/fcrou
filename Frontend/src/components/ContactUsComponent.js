@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Form, Input, Label, Button, Row, Col } from 'reactstrap';
 
-const url = 'http://localhost:5000';
+const url = process.env.REACT_APP_BACKEND_URL;
 
 class ContactUs extends Component {
 

@@ -35,6 +35,8 @@ const returnFeatProducts = (products) => {
 
 function Home(props) {
 
+  console.log(process.env.REACT_APP_BACKEND_URL);
+
   return(
     <div className="container-fluid bgc">
       <HCarousel className="home-carousel"/>

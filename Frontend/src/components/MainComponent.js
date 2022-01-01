@@ -10,6 +10,8 @@ import Footer from './FooterComponent';
 import ContactUs from './ContactUsComponent';
 import Dashboard from './Dashboard';
 
+const url = process.env.REACT_APP_BACKEND_URL;
+
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +28,7 @@ class Main extends Component {
 
     //Fetch all products
     getProducts() {
-        fetch('http://localhost:5000/featuredProducts')
+        fetch(`${url}/featuredProducts`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
@@ -38,7 +40,7 @@ class Main extends Component {
 
     //Fetch tally prices
     getTallyPrices() {
-        fetch('http://localhost:5000/tallyPrices')
+        fetch(`${url}/tallyPrices`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
@@ -50,7 +52,7 @@ class Main extends Component {
 
     //Fetch ContactUs queries(notifications) for dashboard
     getNotifications() {
-        fetch('http://localhost:5000/contactus')
+        fetch(`${url}/contactus`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
@@ -65,7 +67,7 @@ class Main extends Component {
     componentDidMount() {
         //this.getProducts();
         console.log("on component Did Mount");
-        fetch('http://localhost:5000/featuredProducts')
+        fetch(`${url}/featuredProducts`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
@@ -75,7 +77,7 @@ class Main extends Component {
                 console.log("error",err)
             })
         console.log("on getProduct");
-        fetch('http://localhost:5000/tallyPrices')
+        fetch(`${url}/tallyPrices`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
@@ -85,7 +87,7 @@ class Main extends Component {
                 console.log(err, 'on getTally')
             })
             console.log('on Tally setState');
-        fetch('http://localhost:5000/contactus')
+        fetch(`${url}/contactus`)
             .then(res => res.json())
             .then( (result) => {
                 this.setState({
