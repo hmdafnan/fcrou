@@ -7,7 +7,7 @@ var cors = require('cors');
 
 const establishConnection = require('./utils/mongooseConnection');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var employeesRouter = require('./routes/employeesRouter');
 var softwareRouter = require('./routes/softwareRouter');
 var productRouter = require('./routes/productRouter');
 var tallyPriceRouter = require('./routes/tallyPriceRouter');
@@ -29,13 +29,13 @@ app.use(cors());
 establishConnection();
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 app.use('/products', productRouter);
 app.use('/softwares', softwareRouter);
 app.use('/tallyPrices', tallyPriceRouter);
 app.use('/softwares', softwareRouter);
 app.use('/contactus', contactUsRouter);
+app.use('/employees', employeesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -21,6 +21,6 @@ const TallySchema = new mongoose.Schema({
   timestamps: true
 });
 
-const Tally = mongoose.model("Tally", TallySchema);
+const Tally = mongoose.model("TallyPrice", TallySchema);
 
 module.exports = Tally;
