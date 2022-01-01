@@ -8,9 +8,8 @@ var cors = require('cors');
 const establishConnection = require('./utils/mongooseConnection');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var productRouter = require('./routes/productRouter');
 var softwareRouter = require('./routes/softwareRouter');
-var featuredProductRouter = require('./routes/featuredProductRouter');
+var productRouter = require('./routes/productRouter');
 var tallyPriceRouter = require('./routes/tallyPriceRouter');
 var softwareRouter = require('./routes/softwareRouter');
 var contactUsRouter = require('./routes/contactUsRouter');
@@ -34,7 +33,6 @@ app.use('/users', usersRouter);
 
 app.use('/products', productRouter);
 app.use('/softwares', softwareRouter);
-app.use('/featuredProducts', featuredProductRouter);
 app.use('/tallyPrices', tallyPriceRouter);
 app.use('/softwares', softwareRouter);
 app.use('/contactus', contactUsRouter);

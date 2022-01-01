@@ -1,15 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const {getTallyPrice} = require('../controller/tallyPricesController');
+const {getTallyPrice, postTallyPrice, deleteTallyPrice} = require('../controller/tallyPricesController');
 
 const tallyPriceRouter = express.Router();
 
 tallyPriceRouter.use(bodyParser.json());
 
 tallyPriceRouter.route('/')
-.get((req, res, next) => {
-    getTallyPrice(req, res, next)
-})
+.get(getTallyPrice)
+.post(postTallyPrice);
+
+tallyPriceRouter.route('/:tallyId')
+.delete(deleteTallyPrice);
 
 module.exports = tallyPriceRouter;
