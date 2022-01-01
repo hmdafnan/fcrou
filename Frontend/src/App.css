@@ -257,7 +257,7 @@
   padding: 20px;
 }
 
-.carousel-caption {
+.carousel-caption-2 {
   height: 100px;
   top: 400px;
   margin-bottom: 20px;
@@ -268,7 +268,7 @@
   box-shadow: 0 0 70px -17px #39c7fb;
   background: rgba(0,0,0,0.5);
   border-radius: 10px;
-  animation-name: carousel-caption;
+  animation-name: carousel-caption-anim;
   animation-duration: 2s;
   animation-delay: -0.2s;
   animation-direction: alternate;
@@ -278,7 +278,7 @@
   -o-border-radius: 10px;
 }
 
-@keyframes carousel-caption {
+@keyframes carousel-caption-anim {
   0% {top: 200px;}
   50% {top: 460px; height: 100px;}
   75% { top: 400px; height: 200px;}

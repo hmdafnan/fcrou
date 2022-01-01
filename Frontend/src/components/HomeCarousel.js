@@ -82,7 +82,7 @@ class HCarousel extends Component {
 					key={item.src}
 				>
 					<img src={item.src} alt={item.altText} class="home-carousel" height="100%" width="100%"/>
-					<CarouselCaption captionText={item.caption} captionHeader={item.altText} className="carousel-caption" />
+					<CarouselCaption captionText={item.caption} captionHeader={item.altText} className="carousel-caption-2" />
 				</CarouselItem>
 			);
 		});
